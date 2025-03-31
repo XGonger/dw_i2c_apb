@@ -1,0 +1,9 @@
+VRMSTART
+VRM::Version 1
+VRM::AddRmdb C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb
+VRM::AddConfiguration C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb en_status_en {{I fullregr/smoke/rkv_i2c_master_directed_write_packet_test}} {-mseed 0 -vrmdata C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/VRMDATA1}
+VRM::AddConfiguration C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb Gen_call_test {{I fullregr/random/rkv_i2c_slave_directed_read_packet_test}} {-mseed 0 -vrmdata C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/VRMDATA2}
+VRM::AddConfiguration C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb RX_DONE {{I fullregr/random/rkv_i2c_slave_directed_write_packet_test}} {-mseed 0 -GMODE=gui -vrmdata C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/VRMDATA3}
+VRM::AddConfiguration C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb full_tests {{I fullregr}} {-mseed 0 -vrmdata C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/VRMDATA4}
+VRM::AddConfiguration C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/rkv_i2c_regr.rmdb TX_OVER {{I fullregr/random/rkv_i2c_master_tx_over_intr_test}} {-mseed 0 -vrmdata C:/Users/ADMIN/Desktop/V2_pro/virtual_project/rkv_v2pro_i2c_RKV_I2C_TB_05/rkv_i2c_tb/sim/VRMDATA5}
+VRMEND

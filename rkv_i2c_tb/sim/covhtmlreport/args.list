@@ -1,0 +1,12 @@
+-html
+-htmldir
+covhtmlreport
+-assert
+-directive
+-cvg
+-code
+bcefst
+-threshL
+50
+-threshH
+90
