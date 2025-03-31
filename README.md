@@ -1,2 +1,2 @@
-# rkv_v2pro_i2c
-RockerIC verification V2pro virtual project
+# dw_i2c_apb
+DW_I2C_APB verification project
