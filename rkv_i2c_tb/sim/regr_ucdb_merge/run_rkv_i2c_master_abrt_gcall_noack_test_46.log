@@ -1,0 +1,1444 @@
+# vsim -onfinish stop -coverage -sv_seed 46 "+UVM_TESTNAME=rkv_i2c_master_abrt_gcall_noack_test" -l regr_ucdb_merge/run_rkv_i2c_master_abrt_gcall_noack_test_46.log work.rkv_i2c_tb 
+# Start time: 21:46:46 on Mar 27,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.rkv_i2c_if(fast)
+# Loading work.lvc_i2c_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.lvc_i2c_pkg(fast)
+# Loading work.lvc_apb_if(fast)
+# Loading work.lvc_apb_pkg(fast)
+# Loading work.rkv_i2c_pkg(fast)
+# Loading work.rkv_i2c_tb(fast)
+# Loading work.rkv_DW_apb_i2c(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../agents/lvc_apb3/lvc_apb_if.sv(27): Variable '/rkv_i2c_tb/apb_if/prdata', driven via a port connection, is multiply driven. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv
+# ** Warning: (vsim-3839) ../agents/lvc_apb3/lvc_apb_if.sv(28): Variable '/rkv_i2c_tb/apb_if/pready', driven via a port connection, is multiply driven. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv
+# ** Warning: (vsim-3839) ../agents/lvc_apb3/lvc_apb_if.sv(29): Variable '/rkv_i2c_tb/apb_if/pslverr', driven via a port connection, is multiply driven. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv
+# Loading D:/questasim64_10.6c/uvm-1.1d\win64\uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable0_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable1_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ack_general_call_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_master_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_hs_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_fs_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ss_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_mst_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_tx_empty_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_slv_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_rstrt_en_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_slave_en_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_p_det_ifaddr_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_sda_hold_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_source_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_done_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_ic_rd_req_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_p_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_s_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_gen_call_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_clr_leftover_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_set_tx_empty_en_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_mst_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_rx_aborted_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_fifo_filled_and_flushed_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_tx_pop_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_rx_push_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# UVM_INFO @ 0: reporter [RNTST] Running test rkv_i2c_master_abrt_gcall_noack_test...
+# UVM_INFO ../env/rkv_i2c_env.sv(51) @ 0: uvm_test_top.env [build_phase] Unable to get ral_block_rkv_i2c from uvm_config_db and create a RGM locally
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(82) @ 0: uvm_test_top.env.i2c_mst [build_phase] lvc_i2c_master_agent: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(121) @ 0: uvm_test_top.env.i2c_mst [build_phase] creating active agent
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(142) @ 0: uvm_test_top.env.i2c_mst [build_phase] agent configuration
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(147) @ 0: uvm_test_top.env.i2c_mst [build_phase] lvc_i2c_master_agent: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_driver.sv(183) @ 0: uvm_test_top.env.i2c_mst.driver [build_phase] lvc_i2c_master_driver: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_driver.sv(211) @ 0: uvm_test_top.env.i2c_mst.driver [build_phase] lvc_i2c_master_driver: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_monitor.sv(144) @ 0: uvm_test_top.env.i2c_mst.monitor [build_phase] lvc_i2c_master_monitor: Starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_monitor.sv(157) @ 0: uvm_test_top.env.i2c_mst.monitor [build_phase] lvc_i2c_master_monitor: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_sequencer.sv(65) @ 0: uvm_test_top.env.i2c_mst.sequencer [build_phase] get configure ok
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(83) @ 0: uvm_test_top.env.i2c_slv [build_phase] lvc_i2c_slave_agent: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(132) @ 0: uvm_test_top.env.i2c_slv [build_phase] agent configuration
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(135) @ 0: uvm_test_top.env.i2c_slv [build_phase] creating active agent
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(150) @ 0: uvm_test_top.env.i2c_slv [build_phase] lvc_i2c_slave_agent: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_driver.sv(191) @ 0: uvm_test_top.env.i2c_slv.driver [build_phase] lvc_i2c_slave_driver: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_driver.sv(214) @ 0: uvm_test_top.env.i2c_slv.driver [build_phase] lvc_i2c_slave_driver: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_monitor.sv(143) @ 0: uvm_test_top.env.i2c_slv.monitor [build_phase] lvc_i2c_slave_monitor: Starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_monitor.sv(156) @ 0: uvm_test_top.env.i2c_slv.monitor [build_phase] lvc_i2c_slave_monitor: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_sequencer.sv(65) @ 0: uvm_test_top.env.i2c_slv.sequencer [build_phase] cfg get ok
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(152) @ 0: uvm_test_top.env.i2c_mst [connect_phase] lvc_i2c_master_agent: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(156) @ 0: uvm_test_top.env.i2c_mst [connect_phase] lvc_i2c_master_agent: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(155) @ 0: uvm_test_top.env.i2c_slv [connect_phase] lvc_i2c_slave_agent: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(159) @ 0: uvm_test_top.env.i2c_slv [connect_phase] lvc_i2c_slave_agent: finishing...
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO ../tests/user_tests/rkv_i2c_master_abrt_gcall_noack_test.sv(21) @ 0: uvm_test_top [SEQ] sequence starting
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(186) @ 0: uvm_test_top.env.i2c_slv [run_phase] lvc_i2c_slave_agent run phase: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(173) @ 0: uvm_test_top.env.i2c_slv [reconfigure_via_task] configuration at uvm_test_top.env.i2c_slv:
+# ---------------------------------------------------------------------------------
+# Name                             Type                         Size  Value        
+# ---------------------------------------------------------------------------------
+# lvc_i2c_agent_configuration      lvc_i2c_agent_configuration  -     @1518        
+#   inst                           string                       0     ""           
+#   bus_speed                      bus_speed_enum               3     STANDARD_MODE
+#   bus_type                       bus_type_enum                2     I2C_BUS      
+#   scl_high_time_ss               integral                     32    'd4000       
+#   scl_low_time_ss                integral                     32    'd4700       
+#   scl_high_time_offset_ss        integral                     32    'd1000       
+#   scl_low_time_offset_ss         integral                     32    'd300        
+#   min_su_sta_time_ss             integral                     32    'd4700       
+#   min_su_sto_time_ss             integral                     32    'd4000       
+#   min_su_dat_time_ss             integral                     32    'd250        
+#   min_hd_sta_time_ss             integral                     32    'd4000       
+#   min_hd_dat_time_ss             integral                     32    'd300        
+#   max_hd_dat_time_ss             integral                     32    'd3450       
+#   tbuf_time_ss                   integral                     32    'd4700       
+#   scl_high_time_fs               integral                     32    'd600        
+#   scl_low_time_fs                integral                     32    'd1300       
+#   scl_high_time_offset_fs        integral                     32    'd300        
+#   scl_low_time_offset_fs         integral                     32    'd300        
+#   min_su_sta_time_fs             integral                     32    'd600        
+#   min_su_sto_time_fs             integral                     32    'd600        
+#   min_su_dat_time_fs             integral                     32    'd100        
+#   min_hd_sta_time_fs             integral                     32    'd600        
+#   min_hd_dat_time_fs             integral                     32    'd300        
+#   max_hd_dat_time_fs             integral                     32    'd900        
+#   tbuf_time_fs                   integral                     32    'd1300       
+#   scl_high_time_hs               integral                     32    'd100        
+#   scl_low_time_hs                integral                     32    'd200        
+#   scl_high_time_offset_hs        integral                     32    'd40         
+#   scl_low_time_offset_hs         integral                     32    'd40         
+#   min_su_sta_time_hs             integral                     32    'd160        
+#   min_su_sto_time_hs             integral                     32    'd160        
+#   min_su_dat_time_hs             integral                     32    'd10         
+#   min_hd_sta_time_hs             integral                     32    'd160        
+#   min_hd_dat_time_hs             integral                     32    'd40         
+#   max_hd_dat_time_hs             integral                     32    'd70         
+#   tbuf_time_hs                   integral                     32    'd1300       
+#   scl_high_time_fm_plus          integral                     32    'd260        
+#   scl_low_time_fm_plus           integral                     32    'd500        
+#   scl_high_time_offset_fm_plus   integral                     32    'd120        
+#   scl_low_time_offset_fm_plus    integral                     32    'd120        
+#   min_su_sta_time_fm_plus        integral                     32    'd260        
+#   min_su_sto_time_fm_plus        integral                     32    'd260        
+#   min_su_dat_time_fm_plus        integral                     32    'd50         
+#   min_hd_sta_time_fm_plus        integral                     32    'd260        
+#   min_hd_dat_time_fm_plus        integral                     32    'd300        
+#   max_hd_dat_time_fm_plus        integral                     32    'd900        
+#   tbuf_time_fm_plus              integral                     32    'd500        
+#   agent_id                       integral                     32    'b0          
+#   master_code                    integral                     3     'b0          
+#   slave_address                  integral                     10    'b1100110011 
+#   enable_10bit_addr              integral                     1     'b0          
+#   enable_response_to_gen_call    integral                     1     'b1          
+#   slave_type                     integral                     32    'd1          
+#   enable_put_response            integral                     1     'b1          
+#   enable_cci_8bit                integral                     1     'b0          
+#   enable_eeprom_32bit            integral                     1     'b0          
+#   enable_driver_events           integral                     1     'b1          
+#   enable_pullup_resistor         integral                     1     'b1          
+#   start_hs_in_fm_plus            integral                     1     'b0          
+#   enable_bus_clear_sda           integral                     1     'b0          
+#   enable_bus_clear_scl_off       integral                     1     'b0          
+#   clock_count_bus_clear_sda_low  integral                     32    'd15         
+#   clock_count_for_sda_bus_clear  integral                     32    'd3          
+#   bus_clear_sda_timeout          integral                     32    'd20000      
+#   enable_glitch_insert_sda       integral                     1     'b0          
+#   glitch_size_sda                integral                     32    'd1          
+#   enable_glitch_insert_scl       integral                     1     'b0          
+#   glitch_size_scl                integral                     32    'd1          
+#   no_of_slave_address_ranges     integral                     32    'd0          
+#   slave_address_start            da(integral)                 0     -            
+#   slave_address_end              da(integral)                 0     -            
+#   timescale_factor               real                         64    1.000000     
+#   device_id                      integral                     24    'b0          
+#   t_reset_detect_time            integral                     64    'b0          
+#   enable_tlow_1mhz_check         integral                     1     'b0          
+#   enable_tlow_400khz_check       integral                     1     'b0          
+#   enable_tlow_100khz_check       integral                     1     'b0          
+#   inst                           string                       0     ""           
+#   checks_coverage_enable         integral                     1     'b0          
+#   is_active                      integral                     1     'b1          
+#   checks_enable                  integral                     1     'b1          
+#   enable_xml_gen                 integral                     1     'b0          
+#   enable_traffic_log             integral                     1     'b1          
+#   enable_slave_blocking          integral                     1     'b0          
+#   enable_slave_trans_log         integral                     1     'b0          
+# ---------------------------------------------------------------------------------
+# 
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(196) @ 0: uvm_test_top.env.i2c_slv [run_phase] lvc_i2c_slave_agent run phase: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_monitor.sv(238) @ 0: uvm_test_top.env.i2c_slv.monitor [run_phase] lvc_i2c_slave_monitor::Starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_driver.sv(317) @ 0: uvm_test_top.env.i2c_slv.driver [run_phase] lvc_i2c_slave_driver::Starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(183) @ 0: uvm_test_top.env.i2c_mst [run_phase] lvc_i2c_master_agent run phase: starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(170) @ 0: uvm_test_top.env.i2c_mst [reconfigure_via_task] configuration at uvm_test_top.env.i2c_mst:
+# --------------------------------------------------------------------------------
+# Name                             Type                         Size  Value       
+# --------------------------------------------------------------------------------
+# lvc_i2c_agent_configuration      lvc_i2c_agent_configuration  -     @513        
+#   inst                           string                       0     ""          
+#   bus_speed                      bus_speed_enum               3     FAST_MODE   
+#   bus_type                       bus_type_enum                2     I2C_BUS     
+#   scl_high_time_ss               integral                     32    'd4000      
+#   scl_low_time_ss                integral                     32    'd4700      
+#   scl_high_time_offset_ss        integral                     32    'd1000      
+#   scl_low_time_offset_ss         integral                     32    'd300       
+#   min_su_sta_time_ss             integral                     32    'd4700      
+#   min_su_sto_time_ss             integral                     32    'd4000      
+#   min_su_dat_time_ss             integral                     32    'd250       
+#   min_hd_sta_time_ss             integral                     32    'd4000      
+#   min_hd_dat_time_ss             integral                     32    'd300       
+#   max_hd_dat_time_ss             integral                     32    'd3450      
+#   tbuf_time_ss                   integral                     32    'd4700      
+#   scl_high_time_fs               integral                     32    'd600       
+#   scl_low_time_fs                integral                     32    'd1300      
+#   scl_high_time_offset_fs        integral                     32    'd300       
+#   scl_low_time_offset_fs         integral                     32    'd300       
+#   min_su_sta_time_fs             integral                     32    'd600       
+#   min_su_sto_time_fs             integral                     32    'd600       
+#   min_su_dat_time_fs             integral                     32    'd100       
+#   min_hd_sta_time_fs             integral                     32    'd600       
+#   min_hd_dat_time_fs             integral                     32    'd300       
+#   max_hd_dat_time_fs             integral                     32    'd900       
+#   tbuf_time_fs                   integral                     32    'd1300      
+#   scl_high_time_hs               integral                     32    'd100       
+#   scl_low_time_hs                integral                     32    'd200       
+#   scl_high_time_offset_hs        integral                     32    'd40        
+#   scl_low_time_offset_hs         integral                     32    'd40        
+#   min_su_sta_time_hs             integral                     32    'd160       
+#   min_su_sto_time_hs             integral                     32    'd160       
+#   min_su_dat_time_hs             integral                     32    'd10        
+#   min_hd_sta_time_hs             integral                     32    'd160       
+#   min_hd_dat_time_hs             integral                     32    'd40        
+#   max_hd_dat_time_hs             integral                     32    'd70        
+#   tbuf_time_hs                   integral                     32    'd1300      
+#   scl_high_time_fm_plus          integral                     32    'd260       
+#   scl_low_time_fm_plus           integral                     32    'd500       
+#   scl_high_time_offset_fm_plus   integral                     32    'd120       
+#   scl_low_time_offset_fm_plus    integral                     32    'd120       
+#   min_su_sta_time_fm_plus        integral                     32    'd260       
+#   min_su_sto_time_fm_plus        integral                     32    'd260       
+#   min_su_dat_time_fm_plus        integral                     32    'd50        
+#   min_hd_sta_time_fm_plus        integral                     32    'd260       
+#   min_hd_dat_time_fm_plus        integral                     32    'd300       
+#   max_hd_dat_time_fm_plus        integral                     32    'd900       
+#   tbuf_time_fm_plus              integral                     32    'd500       
+#   agent_id                       integral                     32    'b0         
+#   master_code                    integral                     3     'b0         
+#   slave_address                  integral                     10    'b1100110011
+#   enable_10bit_addr              integral                     1     'b0         
+#   enable_response_to_gen_call    integral                     1     'b1         
+#   slave_type                     integral                     32    'd1         
+#   enable_put_response            integral                     1     'b1         
+#   enable_cci_8bit                integral                     1     'b0         
+#   enable_eeprom_32bit            integral                     1     'b0         
+#   enable_driver_events           integral                     1     'b1         
+#   enable_pullup_resistor         integral                     1     'b1         
+#   start_hs_in_fm_plus            integral                     1     'b0         
+#   enable_bus_clear_sda           integral                     1     'b0         
+#   enable_bus_clear_scl_off       integral                     1     'b0         
+#   clock_count_bus_clear_sda_low  integral                     32    'd15        
+#   clock_count_for_sda_bus_clear  integral                     32    'd3         
+#   bus_clear_sda_timeout          integral                     32    'd20000     
+#   enable_glitch_insert_sda       integral                     1     'b0         
+#   glitch_size_sda                integral                     32    'd1         
+#   enable_glitch_insert_scl       integral                     1     'b0         
+#   glitch_size_scl                integral                     32    'd1         
+#   no_of_slave_address_ranges     integral                     32    'd0         
+#   slave_address_start            da(integral)                 0     -           
+#   slave_address_end              da(integral)                 0     -           
+#   timescale_factor               real                         64    1.000000    
+#   device_id                      integral                     24    'b0         
+#   t_reset_detect_time            integral                     64    'b0         
+#   enable_tlow_1mhz_check         integral                     1     'b0         
+#   enable_tlow_400khz_check       integral                     1     'b0         
+#   enable_tlow_100khz_check       integral                     1     'b0         
+#   inst                           string                       0     ""          
+#   checks_coverage_enable         integral                     1     'b0         
+#   is_active                      integral                     1     'b1         
+#   checks_enable                  integral                     1     'b1         
+#   enable_xml_gen                 integral                     1     'b0         
+#   enable_traffic_log             integral                     1     'b1         
+#   enable_slave_blocking          integral                     1     'b0         
+#   enable_slave_trans_log         integral                     1     'b0         
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(193) @ 0: uvm_test_top.env.i2c_mst [run_phase] lvc_i2c_master_agent run phase: finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_monitor.sv(194) @ 0: uvm_test_top.env.i2c_mst.monitor [run_phase] lvc_i2c_master_monitor::Starting...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_driver.sv(323) @ 0: uvm_test_top.env.i2c_mst.driver [run_phase] lvc_i2c_master_driver::Starting...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(115) @ 0: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] reset_listener ...
+# UVM_INFO ../seq_lib/user_virt_seqs/rkv_i2c_master_abrt_gcall_noack_virt_seq.sv(14) @ 0: uvm_test_top.env.sqr@@seq [rkv_i2c_master_abrt_gcall_noack_virt_seq] =====================STARTED=====================
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_driver.sv(331) @ 105000: uvm_test_top.env.i2c_mst.driver [run_phase] lvc_i2c_master_driver::Finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_monitor.sv(203) @ 105000: uvm_test_top.env.i2c_mst.monitor [run_phase] lvc_i2c_master_monitor::Finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_monitor.sv(247) @ 105000: uvm_test_top.env.i2c_slv.monitor [run_phase] lvc_i2c_slave_monitor::Finishing...
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_agent.sv(173) @ 142000: uvm_test_top.env.i2c_slv [reconfigure_via_task] configuration at uvm_test_top.env.i2c_slv:
+# ---------------------------------------------------------------------------------
+# Name                             Type                         Size  Value        
+# ---------------------------------------------------------------------------------
+# lvc_i2c_agent_configuration      lvc_i2c_agent_configuration  -     @517         
+#   inst                           string                       0     ""           
+#   bus_speed                      bus_speed_enum               3     STANDARD_MODE
+#   bus_type                       bus_type_enum                2     I2C_BUS      
+#   scl_high_time_ss               integral                     32    'd4000       
+#   scl_low_time_ss                integral                     32    'd4700       
+#   scl_high_time_offset_ss        integral                     32    'd1000       
+#   scl_low_time_offset_ss         integral                     32    'd300        
+#   min_su_sta_time_ss             integral                     32    'd4700       
+#   min_su_sto_time_ss             integral                     32    'd4000       
+#   min_su_dat_time_ss             integral                     32    'd250        
+#   min_hd_sta_time_ss             integral                     32    'd4000       
+#   min_hd_dat_time_ss             integral                     32    'd300        
+#   max_hd_dat_time_ss             integral                     32    'd3450       
+#   tbuf_time_ss                   integral                     32    'd4700       
+#   scl_high_time_fs               integral                     32    'd600        
+#   scl_low_time_fs                integral                     32    'd1300       
+#   scl_high_time_offset_fs        integral                     32    'd300        
+#   scl_low_time_offset_fs         integral                     32    'd300        
+#   min_su_sta_time_fs             integral                     32    'd600        
+#   min_su_sto_time_fs             integral                     32    'd600        
+#   min_su_dat_time_fs             integral                     32    'd100        
+#   min_hd_sta_time_fs             integral                     32    'd600        
+#   min_hd_dat_time_fs             integral                     32    'd300        
+#   max_hd_dat_time_fs             integral                     32    'd900        
+#   tbuf_time_fs                   integral                     32    'd1300       
+#   scl_high_time_hs               integral                     32    'd100        
+#   scl_low_time_hs                integral                     32    'd200        
+#   scl_high_time_offset_hs        integral                     32    'd40         
+#   scl_low_time_offset_hs         integral                     32    'd40         
+#   min_su_sta_time_hs             integral                     32    'd160        
+#   min_su_sto_time_hs             integral                     32    'd160        
+#   min_su_dat_time_hs             integral                     32    'd10         
+#   min_hd_sta_time_hs             integral                     32    'd160        
+#   min_hd_dat_time_hs             integral                     32    'd40         
+#   max_hd_dat_time_hs             integral                     32    'd70         
+#   tbuf_time_hs                   integral                     32    'd1300       
+#   scl_high_time_fm_plus          integral                     32    'd260        
+#   scl_low_time_fm_plus           integral                     32    'd500        
+#   scl_high_time_offset_fm_plus   integral                     32    'd120        
+#   scl_low_time_offset_fm_plus    integral                     32    'd120        
+#   min_su_sta_time_fm_plus        integral                     32    'd260        
+#   min_su_sto_time_fm_plus        integral                     32    'd260        
+#   min_su_dat_time_fm_plus        integral                     32    'd50         
+#   min_hd_sta_time_fm_plus        integral                     32    'd260        
+#   min_hd_dat_time_fm_plus        integral                     32    'd300        
+#   max_hd_dat_time_fm_plus        integral                     32    'd900        
+#   tbuf_time_fm_plus              integral                     32    'd500        
+#   agent_id                       integral                     32    'b0          
+#   master_code                    integral                     3     'b0          
+#   slave_address                  integral                     10    'b1100110011 
+#   enable_10bit_addr              integral                     1     'b0          
+#   enable_response_to_gen_call    integral                     1     'b1          
+#   slave_type                     integral                     32    'd1          
+#   enable_put_response            integral                     1     'b1          
+#   enable_cci_8bit                integral                     1     'b0          
+#   enable_eeprom_32bit            integral                     1     'b0          
+#   enable_driver_events           integral                     1     'b1          
+#   enable_pullup_resistor         integral                     1     'b1          
+#   start_hs_in_fm_plus            integral                     1     'b0          
+#   enable_bus_clear_sda           integral                     1     'b0          
+#   enable_bus_clear_scl_off       integral                     1     'b0          
+#   clock_count_bus_clear_sda_low  integral                     32    'd15         
+#   clock_count_for_sda_bus_clear  integral                     32    'd3          
+#   bus_clear_sda_timeout          integral                     32    'd20000      
+#   enable_glitch_insert_sda       integral                     1     'b0          
+#   glitch_size_sda                integral                     32    'd1          
+#   enable_glitch_insert_scl       integral                     1     'b0          
+#   glitch_size_scl                integral                     32    'd1          
+#   no_of_slave_address_ranges     integral                     32    'd0          
+#   slave_address_start            da(integral)                 0     -            
+#   slave_address_end              da(integral)                 0     -            
+#   timescale_factor               real                         64    1.000000     
+#   device_id                      integral                     24    'b0          
+#   t_reset_detect_time            integral                     64    'b0          
+#   enable_tlow_1mhz_check         integral                     1     'b0          
+#   enable_tlow_400khz_check       integral                     1     'b0          
+#   enable_tlow_100khz_check       integral                     1     'b0          
+#   inst                           string                       0     ""           
+#   checks_coverage_enable         integral                     1     'b0          
+#   is_active                      integral                     1     'b1          
+#   checks_enable                  integral                     1     'b1          
+#   enable_xml_gen                 integral                     1     'b0          
+#   enable_traffic_log             integral                     1     'b1          
+#   enable_slave_blocking          integral                     1     'b0          
+#   enable_slave_trans_log         integral                     1     'b0          
+# ---------------------------------------------------------------------------------
+# 
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_master_agent.sv(170) @ 142000: uvm_test_top.env.i2c_mst [reconfigure_via_task] configuration at uvm_test_top.env.i2c_mst:
+# --------------------------------------------------------------------------------
+# Name                             Type                         Size  Value       
+# --------------------------------------------------------------------------------
+# lvc_i2c_agent_configuration      lvc_i2c_agent_configuration  -     @513        
+#   inst                           string                       0     ""          
+#   bus_speed                      bus_speed_enum               3     FAST_MODE   
+#   bus_type                       bus_type_enum                2     I2C_BUS     
+#   scl_high_time_ss               integral                     32    'd4000      
+#   scl_low_time_ss                integral                     32    'd4700      
+#   scl_high_time_offset_ss        integral                     32    'd1000      
+#   scl_low_time_offset_ss         integral                     32    'd300       
+#   min_su_sta_time_ss             integral                     32    'd4700      
+#   min_su_sto_time_ss             integral                     32    'd4000      
+#   min_su_dat_time_ss             integral                     32    'd250       
+#   min_hd_sta_time_ss             integral                     32    'd4000      
+#   min_hd_dat_time_ss             integral                     32    'd300       
+#   max_hd_dat_time_ss             integral                     32    'd3450      
+#   tbuf_time_ss                   integral                     32    'd4700      
+#   scl_high_time_fs               integral                     32    'd600       
+#   scl_low_time_fs                integral                     32    'd1300      
+#   scl_high_time_offset_fs        integral                     32    'd300       
+#   scl_low_time_offset_fs         integral                     32    'd300       
+#   min_su_sta_time_fs             integral                     32    'd600       
+#   min_su_sto_time_fs             integral                     32    'd600       
+#   min_su_dat_time_fs             integral                     32    'd100       
+#   min_hd_sta_time_fs             integral                     32    'd600       
+#   min_hd_dat_time_fs             integral                     32    'd300       
+#   max_hd_dat_time_fs             integral                     32    'd900       
+#   tbuf_time_fs                   integral                     32    'd1300      
+#   scl_high_time_hs               integral                     32    'd100       
+#   scl_low_time_hs                integral                     32    'd200       
+#   scl_high_time_offset_hs        integral                     32    'd40        
+#   scl_low_time_offset_hs         integral                     32    'd40        
+#   min_su_sta_time_hs             integral                     32    'd160       
+#   min_su_sto_time_hs             integral                     32    'd160       
+#   min_su_dat_time_hs             integral                     32    'd10        
+#   min_hd_sta_time_hs             integral                     32    'd160       
+#   min_hd_dat_time_hs             integral                     32    'd40        
+#   max_hd_dat_time_hs             integral                     32    'd70        
+#   tbuf_time_hs                   integral                     32    'd1300      
+#   scl_high_time_fm_plus          integral                     32    'd260       
+#   scl_low_time_fm_plus           integral                     32    'd500       
+#   scl_high_time_offset_fm_plus   integral                     32    'd120       
+#   scl_low_time_offset_fm_plus    integral                     32    'd120       
+#   min_su_sta_time_fm_plus        integral                     32    'd260       
+#   min_su_sto_time_fm_plus        integral                     32    'd260       
+#   min_su_dat_time_fm_plus        integral                     32    'd50        
+#   min_hd_sta_time_fm_plus        integral                     32    'd260       
+#   min_hd_dat_time_fm_plus        integral                     32    'd300       
+#   max_hd_dat_time_fm_plus        integral                     32    'd900       
+#   tbuf_time_fm_plus              integral                     32    'd500       
+#   agent_id                       integral                     32    'b0         
+#   master_code                    integral                     3     'b0         
+#   slave_address                  integral                     10    'b1100110011
+#   enable_10bit_addr              integral                     1     'b0         
+#   enable_response_to_gen_call    integral                     1     'b1         
+#   slave_type                     integral                     32    'd1         
+#   enable_put_response            integral                     1     'b1         
+#   enable_cci_8bit                integral                     1     'b0         
+#   enable_eeprom_32bit            integral                     1     'b0         
+#   enable_driver_events           integral                     1     'b1         
+#   enable_pullup_resistor         integral                     1     'b1         
+#   start_hs_in_fm_plus            integral                     1     'b0         
+#   enable_bus_clear_sda           integral                     1     'b0         
+#   enable_bus_clear_scl_off       integral                     1     'b0         
+#   clock_count_bus_clear_sda_low  integral                     32    'd15        
+#   clock_count_for_sda_bus_clear  integral                     32    'd3         
+#   bus_clear_sda_timeout          integral                     32    'd20000     
+#   enable_glitch_insert_sda       integral                     1     'b0         
+#   glitch_size_sda                integral                     32    'd1         
+#   enable_glitch_insert_scl       integral                     1     'b0         
+#   glitch_size_scl                integral                     32    'd1         
+#   no_of_slave_address_ranges     integral                     32    'd0         
+#   slave_address_start            da(integral)                 0     -           
+#   slave_address_end              da(integral)                 0     -           
+#   timescale_factor               real                         64    1.000000    
+#   device_id                      integral                     24    'b0         
+#   t_reset_detect_time            integral                     64    'b0         
+#   enable_tlow_1mhz_check         integral                     1     'b0         
+#   enable_tlow_400khz_check       integral                     1     'b0         
+#   enable_tlow_100khz_check       integral                     1     'b0         
+#   inst                           string                       0     ""          
+#   checks_coverage_enable         integral                     1     'b0         
+#   is_active                      integral                     1     'b0         
+#   checks_enable                  integral                     1     'b1         
+#   enable_xml_gen                 integral                     1     'b0         
+#   enable_traffic_log             integral                     1     'b1         
+#   enable_slave_blocking          integral                     1     'b0         
+#   enable_slave_trans_log         integral                     1     'b0         
+# --------------------------------------------------------------------------------
+# 
+# UVM_INFO ../seq_lib/user_elem_seqs/rkv_apb_user_config_seq.sv(39) @ 142000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_user_cfg_seq [body] Entering...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 142000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 142000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 142000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 150011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 154000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 154000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_CON: value='h6d : updated value = 'h6d
+# UVM_INFO @ 154000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_CON=0x6d
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 154000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 154000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 154000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 162011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 166000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 166000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_TAR: value='hb33 : updated value = 'hb33
+# UVM_INFO @ 166000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_TAR=0xb33
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 166000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 166000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 166000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 174011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 178000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_FS_SCL_HCNT: value='hc8 : updated value = 'hc8
+# UVM_INFO @ 178000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_FS_SCL_HCNT=0xc8
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 186011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 190000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_FS_SCL_LCNT: value='hc8 : updated value = 'hc8
+# UVM_INFO @ 190000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_FS_SCL_LCNT=0xc8
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 198011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 202000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 202000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_ENABLE: value='h1 : updated value = 'h1
+# UVM_INFO @ 202000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_ENABLE=0x1
+# UVM_INFO ../seq_lib/user_elem_seqs/rkv_apb_user_config_seq.sv(83) @ 202000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_user_cfg_seq [body] Exiting...
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_write_packet_seq.sv(18) @ 202000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_write_packet_seq [body] Entering...
+# UVM_INFO ../seq_lib/elem_seqs/rkv_i2c_slave_write_response_seq.sv(23) @ 202000: uvm_test_top.env.i2c_slv.sequencer@@seq.i2c_slv_write_resp_seq [body] Entering...
+# ---------------------------------------------------------------------------------------------------------------
+# Name                           Type                       Size  Value                                          
+# ---------------------------------------------------------------------------------------------------------------
+# req                            lvc_i2c_slave_transaction  -     @2035                                          
+#   cmd                          command_enum               8     I2C_WRITE                                      
+#   addr                         integral                   10    'h333                                          
+#   data                         da(integral)               208   -                                              
+#     [0]                        integral                   8     'h18                                           
+#     [1]                        integral                   8     'h32                                           
+#     [2]                        integral                   8     'hcb                                           
+#     [3]                        integral                   8     'hb5                                           
+#     [4]                        integral                   8     'h39                                           
+#     ...                        ...                        ...   ...                                            
+#     [203]                      integral                   8     'hdb                                           
+#     [204]                      integral                   8     'h87                                           
+#     [205]                      integral                   8     'hcd                                           
+#     [206]                      integral                   8     'he9                                           
+#     [207]                      integral                   8     'hd7                                           
+#   addr_10bit                   integral                   1     'h0                                            
+#   read_write                   integral                   1     'h0                                            
+#   begin_time                   time                       64    202000                                         
+#   depth                        int                        32    'd3                                            
+#   parent sequence (name)       string                     22    i2c_slv_write_resp_seq                         
+#   parent sequence (full name)  string                     47    uvm_test_top.env.sqr.seq.i2c_slv_write_resp_seq
+#   sequencer                    string                     34    uvm_test_top.env.i2c_slv.sequencer             
+# ---------------------------------------------------------------------------------------------------------------
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 202000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 202000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 202000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(221) @ 210000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] monitored aborted/exceptional interrupt asserted, and disable scoreboard.
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 210011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 214000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 214000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h6
+# UVM_INFO @ 214000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=6
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 214000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 214000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(55) @ 214000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 222011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 226000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(221) @ 226000: uvm_test_top.env.predictor [REG_PREDICT] Observed WRITE transaction to register rgm.IC_DATA_CMD: value='hf0 : updated value = 'hf0
+# UVM_INFO @ 226000: reporter [RegModel] Wrote register via map rgm.uvm_reg_map: rgm.IC_DATA_CMD=0xf0
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_write_packet_seq.sv(37) @ 226000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_write_packet_seq [body] Exiting...
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_intr_wait_seq.sv(17) @ 226000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_intr_wait_seq [body] Entering...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 226000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 226000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 226000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 234011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 238000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 238000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h0
+# UVM_INFO @ 238000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=0
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 638000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 638000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 638000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 646011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 650000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 650000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h0
+# UVM_INFO @ 650000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=0
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 1050000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 1050000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 1050000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 1058011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 1062000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 1062000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h0
+# UVM_INFO @ 1062000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=0
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 1462000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 1462000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 1462000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 1470011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 1474000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 1474000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h0
+# UVM_INFO @ 1474000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=0
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 1874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 1874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 1874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 1882011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 1886000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 1886000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h0
+# UVM_INFO @ 1886000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=0
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 2286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 2286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 2286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 2294011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 2298000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 2298000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h100
+# UVM_INFO @ 2298000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=100
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 2698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 2698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 2698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 2706011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 2710000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 2710000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 2710000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 3110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 3110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 3110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 3118011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 3122000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 3122000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 3122000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 3522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 3522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 3522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 3530011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 3534000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 3534000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 3534000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 3934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 3934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 3934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 3942011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 3946000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 3946000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 3946000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 4346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 4346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 4346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 4354011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 4358000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 4358000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 4358000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 4758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 4758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 4758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 4766011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 4770000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 4770000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 4770000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 5170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 5170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 5170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 5178011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 5182000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 5182000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 5182000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 5582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 5582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 5582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 5590011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 5594000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 5594000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 5594000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 5994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 5994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 5994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 6002011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 6006000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 6006000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 6006000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 6406000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 6406000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 6406000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 6414011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 6418000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 6418000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 6418000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 6818000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 6818000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 6818000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 6826011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 6830000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 6830000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 6830000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 7230000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 7230000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 7230000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 7238011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 7242000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 7242000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 7242000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 7642000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 7642000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 7642000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 7650011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 7654000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 7654000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 7654000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 8054000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 8054000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 8054000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 8062011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 8066000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 8066000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 8066000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 8466000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 8466000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 8466000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 8474011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 8478000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 8478000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 8478000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 8878000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 8878000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 8878000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 8886011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 8890000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 8890000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 8890000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 9290000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 9290000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 9290000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 9298011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 9302000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 9302000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 9302000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 9702000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 9702000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 9702000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 9710011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 9714000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 9714000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 9714000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 10114000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 10114000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 10114000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 10122011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 10126000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 10126000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 10126000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 10526000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 10526000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 10526000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 10534011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 10538000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 10538000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 10538000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 10938000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 10938000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 10938000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 10946011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 10950000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 10950000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 10950000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 11350000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 11350000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 11350000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 11358011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 11362000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 11362000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 11362000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 11762000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 11762000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 11762000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 11770011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 11774000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 11774000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 11774000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 12174000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 12174000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 12174000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 12182011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 12186000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 12186000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 12186000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 12586000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 12586000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 12586000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 12594011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 12598000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 12598000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 12598000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 12998000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 12998000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 12998000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 13006011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 13010000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 13010000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 13010000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 13410000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 13410000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 13410000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 13418011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 13422000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 13422000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 13422000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 13822000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 13822000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 13822000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 13830011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 13834000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 13834000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 13834000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 14234000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 14234000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 14234000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 14242011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 14246000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 14246000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 14246000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 14646000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 14646000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 14646000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 14654011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 14658000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 14658000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 14658000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 15058000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 15058000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 15058000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 15066011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 15070000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 15070000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 15070000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 15470000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 15470000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 15470000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 15478011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 15482000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 15482000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 15482000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 15882000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 15882000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 15882000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 15890011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 15894000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 15894000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 15894000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 16294000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 16294000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 16294000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 16302011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 16306000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 16306000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 16306000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 16706000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 16706000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 16706000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 16714011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 16718000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 16718000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 16718000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 17118000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 17118000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 17118000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 17126011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 17130000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 17130000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 17130000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 17530000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 17530000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 17530000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 17538011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 17542000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 17542000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 17542000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 17942000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 17942000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 17942000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 17950011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 17954000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 17954000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 17954000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 18354000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 18354000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 18354000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 18362011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 18366000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 18366000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 18366000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 18766000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 18766000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 18766000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 18774011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 18778000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 18778000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 18778000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 19178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 19178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 19178000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 19186011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 19190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 19190000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 19190000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 19590000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 19590000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 19590000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 19598011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 19602000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 19602000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 19602000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 20002000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 20002000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 20002000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 20010011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 20014000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 20014000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 20014000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 20414000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 20414000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 20414000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 20422011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 20426000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 20426000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 20426000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 20826000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 20826000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 20826000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 20834011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 20838000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 20838000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 20838000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 21238000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 21238000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 21238000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 21246011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 21250000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 21250000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 21250000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 21650000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 21650000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 21650000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 21658011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 21662000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 21662000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 21662000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 22062000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 22062000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 22062000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 22070011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 22074000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 22074000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 22074000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 22474000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 22474000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 22474000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 22482011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 22486000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 22486000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 22486000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 22886000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 22886000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 22886000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 22894011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 22898000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 22898000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 22898000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 23298000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 23298000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 23298000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 23306011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 23310000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 23310000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 23310000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 23710000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 23710000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 23710000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 23718011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 23722000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 23722000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 23722000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 24122000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 24122000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 24122000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 24130011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 24134000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 24134000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 24134000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 24534000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 24534000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 24534000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 24542011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 24546000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 24546000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 24546000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 24946000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 24946000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 24946000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 24954011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 24958000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 24958000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 24958000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 25358000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 25358000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 25358000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 25366011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 25370000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 25370000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 25370000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 25770000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 25770000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 25770000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 25778011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 25782000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 25782000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 25782000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 26182000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 26182000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 26182000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 26190011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 26194000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 26194000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 26194000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 26594000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 26594000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 26594000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 26602011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 26606000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 26606000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 26606000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 27006000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 27006000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 27006000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 27014011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 27018000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 27018000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 27018000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 27418000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 27418000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 27418000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 27426011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 27430000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 27430000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 27430000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 27830000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 27830000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 27830000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 27838011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 27842000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 27842000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 27842000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 28242000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 28242000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 28242000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 28250011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 28254000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 28254000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 28254000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 28654000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 28654000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 28654000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 28662011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 28666000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 28666000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 28666000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 29066000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 29066000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 29066000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 29074011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 29078000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 29078000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 29078000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 29478000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 29478000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 29478000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 29486011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 29490000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 29490000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 29490000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 29890000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 29890000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 29890000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 29898011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 29902000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 29902000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 29902000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 30302000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 30302000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 30302000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 30310011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 30314000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 30314000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 30314000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 30714000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 30714000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 30714000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 30722011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 30726000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 30726000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 30726000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 31126000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 31126000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 31126000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 31134011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 31138000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 31138000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 31138000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 31538000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 31538000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 31538000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 31546011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 31550000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 31550000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 31550000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 31950000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 31950000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 31950000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 31958011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 31962000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 31962000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 31962000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 32362000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 32362000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 32362000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 32370011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 32374000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 32374000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 32374000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 32774000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 32774000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 32774000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 32782011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 32786000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 32786000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 32786000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 33186000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 33186000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 33186000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 33194011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 33198000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 33198000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 33198000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 33598000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 33598000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 33598000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 33606011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 33610000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 33610000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 33610000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 34010000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 34010000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 34010000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 34018011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 34022000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 34022000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 34022000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 34422000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 34422000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 34422000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 34430011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 34434000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 34434000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 34434000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 34834000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 34834000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 34834000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 34842011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 34846000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 34846000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 34846000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 35246000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 35246000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 35246000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 35254011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 35258000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 35258000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 35258000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 35658000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 35658000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 35658000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 35666011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 35670000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 35670000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 35670000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 36070000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 36070000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 36070000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 36078011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 36082000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 36082000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 36082000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 36482000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 36482000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 36482000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 36490011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 36494000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 36494000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 36494000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 36894000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 36894000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 36894000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 36902011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 36906000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 36906000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 36906000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 37306000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 37306000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 37306000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 37314011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 37318000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 37318000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 37318000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 37718000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 37718000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 37718000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 37726011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 37730000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 37730000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 37730000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 38130000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 38130000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 38130000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 38138011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 38142000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 38142000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 38142000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 38542000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 38542000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 38542000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 38550011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 38554000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 38554000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 38554000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 38954000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 38954000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 38954000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 38962011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 38966000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 38966000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 38966000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 39366000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 39366000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 39366000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 39374011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 39378000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 39378000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 39378000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 39778000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 39778000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 39778000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 39786011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 39790000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 39790000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 39790000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 40190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 40190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 40190000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 40198011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 40202000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 40202000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 40202000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 40602000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 40602000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 40602000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 40610011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 40614000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 40614000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 40614000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41014000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41014000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41014000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41022011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41026000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41026000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 41026000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41426000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41426000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41426000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41434011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41438000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41438000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h500
+# UVM_INFO @ 41438000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=500
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(221) @ 41578000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] monitored aborted/exceptional interrupt asserted, and disable scoreboard.
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(221) @ 41582000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] monitored aborted/exceptional interrupt asserted, and disable scoreboard.
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41838000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41838000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41838000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41846011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41850000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41850000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h550
+# UVM_INFO @ 41850000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=550
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_intr_wait_seq.sv(42) @ 41850000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_intr_wait_seq [body] Exiting...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41850000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41850000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41850000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41858011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41862000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41862000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_TX_ABRT_SOURCE: value='h800010
+# UVM_INFO @ 41862000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_TX_ABRT_SOURCE=800010
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_intr_clear_seq.sv(17) @ 41862000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_intr_clear_seq [body] Entering...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41862000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41862000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41862000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41870011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41874000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_RAW_INTR_STAT: value='h550
+# UVM_INFO @ 41874000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_RAW_INTR_STAT=550
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 41874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 41874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 41874000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 41882011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(221) @ 41886000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] monitored aborted/exceptional interrupt asserted, and disable scoreboard.
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 41886000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 41886000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_CLR_TX_ABRT: value='h1
+# UVM_INFO @ 41886000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_CLR_TX_ABRT=1
+# UVM_INFO ../seq_lib/elem_seqs/rkv_apb_intr_clear_seq.sv(40) @ 42286000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_intr_clear_seq [body] Exiting...
+# UVM_INFO ../seq_lib/user_elem_seqs/rkv_apb_user_wait_empty_seq.sv(14) @ 42286000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_user_wait_empty_seq [body] Entering...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 42286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 42286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 42286000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 42294011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 42298000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 42298000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 42298000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 42698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 42698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 42698000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 42706011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 42710000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 42710000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 42710000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 43110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 43110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 43110000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 43118011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 43122000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 43122000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 43122000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 43522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 43522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 43522000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 43530011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 43534000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 43534000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 43534000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 43934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 43934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 43934000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 43942011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 43946000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 43946000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 43946000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 44346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 44346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 44346000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 44354011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 44358000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 44358000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 44358000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 44758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 44758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 44758000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 44766011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 44770000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 44770000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 44770000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 45170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 45170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 45170000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 45178011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 45182000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 45182000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 45182000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 45582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 45582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 45582000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 45590011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 45594000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 45594000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h27
+# UVM_INFO @ 45594000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=27
+# UVM_INFO ../agents/lvc_i2c/lvc_i2c_slave_driver.sv(273) @ 45835000: uvm_test_top.env.i2c_slv.driver [consume_from_seq_item_port] lvc_i2c_slave_driver: Driving transaction with cmd I2C_WRITE
+# master monitor get trans, print_monitor_trans
+# --------------------------------------------------------------------------
+# Name                        Type                        Size  Value       
+# --------------------------------------------------------------------------
+# lvc_i2c_master_transaction  lvc_i2c_master_transaction  -     @4838       
+#   cmd                       command_enum                8     I2C_GEN_CALL
+#   addr                      integral                    10    'h333       
+#   data                      da(integral)                2     -           
+#     [0]                     integral                    8     'h0         
+#     [1]                     integral                    8     'h0         
+#   addr_10bit                integral                    1     'h0         
+#   read_write                integral                    1     'h0         
+# --------------------------------------------------------------------------
+# slave monitor get trans, print_slv_mon_trans
+# ------------------------------------------------------------------------
+# Name                       Type                       Size  Value       
+# ------------------------------------------------------------------------
+# lvc_i2c_slave_transaction  lvc_i2c_slave_transaction  -     @4842       
+#   cmd                      command_enum               8     I2C_GEN_CALL
+#   addr                     integral                   10    'h333       
+#   data                     da(integral)               2     -           
+#     [0]                    integral                   8     'h0         
+#     [1]                    integral                   8     'h0         
+#   addr_10bit               integral                   1     'h0         
+#   read_write               integral                   1     'h0         
+# ------------------------------------------------------------------------
+# UVM_INFO ../seq_lib/elem_seqs/rkv_i2c_slave_write_response_seq.sv(39) @ 45835000: uvm_test_top.env.i2c_slv.sequencer@@seq.i2c_slv_write_resp_seq [body] Exiting...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(34) @ 45994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer got next item
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(45) @ 45994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] drive_transfer
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(81) @ 45994000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_write ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(107) @ 46002011: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] do_idle ...
+# UVM_INFO ../agents/lvc_apb3/lvc_apb_master_driver.sv(40) @ 46006000: uvm_test_top.env.apb_mst.driver [lvc_apb_master_driver] sequencer item_done_triggered
+# UVM_INFO verilog_src/uvm-1.1d/src/reg/uvm_reg_predictor.svh(225) @ 46006000: uvm_test_top.env.predictor [REG_PREDICT] Observed READ transaction to register rgm.IC_STATUS: value='h6
+# UVM_INFO @ 46006000: reporter [RegModel] Read  register via map rgm.uvm_reg_map: rgm.IC_STATUS=6
+# UVM_INFO ../seq_lib/user_elem_seqs/rkv_apb_user_wait_empty_seq.sv(23) @ 46006000: uvm_test_top.env.apb_mst.sequencer@@seq.apb_user_wait_empty_seq [body] Exiting...
+# UVM_INFO ../seq_lib/user_virt_seqs/rkv_i2c_master_abrt_gcall_noack_virt_seq.sv(72) @ 56006000: uvm_test_top.env.sqr@@seq [rkv_i2c_master_abrt_gcall_noack_virt_seq] =====================FINISHED=====================
+# UVM_INFO ../tests/user_tests/rkv_i2c_master_abrt_gcall_noack_test.sv(23) @ 56006000: uvm_test_top [SEQ] sequence finished
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 56006000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(199) @ 56006000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] 
+#  ------------------------------------------------ 
+# |   ScoreBoard(Disabled) Report                  |
+#  ------------------------------------------------ 
+# UVM_INFO ../env/rkv_i2c_master_scoreboard.sv(207) @ 56006000: uvm_test_top.env.sbd_mst [rkv_i2c_master_scoreboard] 
+#  DISABLED REASON::
+#  Scoreboard is auto-diabled due to [abort/exceptional interrupt asserted].
+# 
+# --- UVM Report Summary ---
+# 
+# Quit count :     0 of    10
+# ** Report counts by severity
+# UVM_INFO :  921
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     3
+# [REG_PREDICT]   122
+# [RNTST]     1
+# [RegModel]   122
+# [SEQ]     2
+# [TEST_DONE]     1
+# [body]    12
+# [build_phase]    19
+# [connect_phase]     4
+# [consume_from_seq_item_port]     1
+# [lvc_apb_master_driver]   611
+# [reconfigure_via_task]     4
+# [rkv_i2c_master_abrt_gcall_noack_virt_seq]     2
+# [rkv_i2c_master_scoreboard]     6
+# [run_phase]    11
+# ** Note: $finish    : D:/questasim64_10.6c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 56006 ns  Iteration: 59  Instance: /rkv_i2c_tb
+# Break in Task uvm_pkg/uvm_root::run_test at D:/questasim64_10.6c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# End time: 21:46:56 on Mar 27,2025, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 3
+# simulating rkv_i2c_master_abrt_10addr1_noack_test
+# 29 +UVM_TESTNAME=rkv_i2c_master_abrt_10addr1_noack_test -l regr_ucdb_merge/run_rkv_i2c_master_abrt_10addr1_noack_test_29.log
